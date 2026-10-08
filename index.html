@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+    <!-- Makes website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Website title -->
+    <title>Student Help Center</title>
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--HEADER--> 
+    <header>
+      <h1>🎓 Student Help Center</h1>
+      <p>Learn Web Development Easily</p>
+    </header>
+    <!--MAIN CONTENT--->
+    <main>
+      <!--TOGGLE SECTION--->
+      <section class="section">
+        <h2>Course Information</h2>
+        <!-- Toggle button -->
+        <button id="aboutBtn">Show Course Information</button>
+        <!-- Information that will be shown/hidden -->
+        <div id="aboutText">
+          <p>
+            Full Stack Web Development teaches students how to create websites
+            and web applications.
+          </p>
+          <p>
+            Students learn HTML, CSS, JavaScript, jQuery, Node.js, Express.js
+            and MongoDB.
+          </p>
+        </div>
+      </section>
+      <!---COURSE CARDS-->
+      <section class="section">
+        <h2>Our Courses</h2>
+
+        <div class="course-container">
+          <div class="course-card">
+            <h3>HTML</h3>
+
+            <p>Learn the structure of webpages.</p>
+          </div>
+          <div class="course-card">
+            <h3>CSS</h3>
+            <p>Learn how to design webpages.</p>
+          </div>
+          <div class="course-card">
+            <h3>JavaScript</h3>
+
+            <p>Learn how to make webpages interactive.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             CHANGE EVENT
+        ========================== -->
+
+      <section class="section">
+        <h2>Select Your Course</h2>
+
+        <select id="course">
+          <option value="">Select a Course</option>
+
+          <option value="HTML">HTML</option>
+
+          <option value="CSS">CSS</option>
+
+          <option value="JavaScript">JavaScript</option>
+
+          <option value="jQuery">jQuery</option>
+
+          <option value="Full Stack Web Development">
+            Full Stack Web Development
+          </option>
+        </select>
+
+        <!-- Selected course will appear here -->
+        <p id="selectedCourse"></p>
+      </section>
+
+      <!-- =========================
+             FAQ ACCORDION
+        ========================== -->
+
+      <section class="section">
+        <h2>Frequently Asked Questions</h2>
+
+        <!-- Parent container -->
+        <div id="faqContainer">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <div class="question">What is HTML?</div>
+
+            <div class="answer">
+              HTML is used to create the structure of a webpage.
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <div class="question">What is CSS?</div>
+
+            <div class="answer">CSS is used to style and design a webpage.</div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <div class="question">What is JavaScript?</div>
+
+            <div class="answer">
+              JavaScript is used to add functionality and interactivity to
+              webpages.
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <div class="question">What is jQuery?</div>
+
+            <div class="answer">
+              jQuery is a JavaScript library that makes JavaScript tasks easier.
+            </div>
+          </div>
+        </div>
+      </section>
+      //CONTACT SECTION
+      <section class="section contact-section">
+        <h2>Need Help?</h2>
+        <p>Contact us if you have any questions.</p>
+        <!-- Open modal button -->
+        <button id="contactBtn">Contact Us</button>
+      </section>
+    </main>
+
+    <!-- =========================
+         MODAL
+    ========================== -->
+
+    <div id="contactModal">
+      <div class="modal-content">
+        <!-- Modal heading -->
+        <h2>Contact Us</h2>
+
+        <!-- Name input -->
+        <input type="text" placeholder="Enter your name" />
+
+        <!-- Email input -->
+        <input type="email" placeholder="Enter your email" />
+
+        <!-- Message -->
+        <textarea placeholder="Enter your message"> </textarea>
+
+        <!-- Submit button -->
+        <button id="submitBtn">Submit</button>
+
+        <!-- Close button -->
+        <button id="closeBtn">Close</button>
+      </div>
+    </div>
+
+    <!-- =========================
+         jQuery CDN
+    ========================== -->
+
+    <!--
+        jQuery library is loaded first.
+    -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--
+        Our JavaScript file is loaded after jQuery.
+    -->
+    <script src="app.js"></script>
+  </body>
+</html>
